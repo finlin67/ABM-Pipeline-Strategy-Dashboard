@@ -1,4 +1,6 @@
 // FILE: ABMPipelineStrategy.tsx
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -88,8 +90,8 @@ export default function ABMPipelineStrategy() {
   }, []);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-black">
-      <div className="w-[600px] h-[600px] overflow-hidden relative bg-[#0a192f] text-slate-300 font-sans flex flex-col shadow-2xl rounded-xl border border-slate-800 selection:bg-[#00d2ff]/30">
+    <div className="w-full h-full flex items-center justify-center p-2 bg-slate-950/20">
+      <div className="w-full h-full max-w-[600px] max-h-[600px] overflow-hidden relative bg-[#0a192f] text-slate-300 font-sans flex flex-col shadow-2xl rounded-xl border border-slate-800 selection:bg-[#00d2ff]/30">
         
         {/* HEADER */}
         <header className="flex-none h-14 flex items-center justify-between px-4 border-b border-[#233554] bg-[#0a192f]/95 backdrop-blur-md z-20">
@@ -215,7 +217,7 @@ export default function ABMPipelineStrategy() {
           <section className="col-span-7 flex flex-col gap-4 h-full">
             
             {/* Growth Chart Container - Expanded Height */}
-            <div className="bg-[#112240] rounded-lg border border-[#233554] p-4 h-[260px] flex flex-col relative overflow-hidden shadow-lg">
+            <div className="bg-[#112240] rounded-lg border border-[#233554] p-4 flex-1 min-h-[160px] flex flex-col relative overflow-hidden shadow-lg">
                <div className="flex justify-between items-center mb-3 z-10">
                   <h3 className="text-[10px] font-bold text-white uppercase tracking-wider">Growth Velocity</h3>
                   <div className="px-1.5 py-0.5 rounded bg-[#00d2ff]/10 border border-[#00d2ff]/20 text-[9px] font-bold text-[#00d2ff]">
